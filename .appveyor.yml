@@ -22,8 +22,8 @@ environment:
     # # - nodejs_version: '23'
     - nodejs_version: '22'
       ELECTRON_VERSION: '34.5.8'
-    # - nodejs_version: '22'
-    #   ELECTRON_VERSION: '32.2.6'
+    - nodejs_version: '22'
+      ELECTRON_VERSION: '25.3.2'
     # - nodejs_version: '22'
     #   ELECTRON_VERSION: '31.7.5'
     # - nodejs_version: '20'
@@ -51,7 +51,7 @@ skip_branch_with_pr: true
 
 platform:
   - x86
-  # - x64
+  - x64
 
 # git clone depth
 clone_depth: 5
