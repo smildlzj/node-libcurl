@@ -195,7 +195,7 @@ test_script:
 
 after_test:
   - IF "%PUBLISH_BINARY%" == "true" (node-pre-gyp package testpackage --verbose)
-  - IF "%PUBLISH_BINARY%" == "true" (for /f "usebackq delims=" %%x in (`node-pre-gyp reveal staged_tarball --silent`) do node scripts\module-packaging.js --publish %%x)
+  # - IF "%PUBLISH_BINARY%" == "true" (for /f "usebackq delims=" %%x in (`node-pre-gyp reveal staged_tarball --silent`) do node scripts\module-packaging.js --publish %%x)
 
 on_success:
   - SET INSTALL_RESULT=0
@@ -209,3 +209,7 @@ on_success:
 
 # Don't actually deploy.
 deploy: off
+
+artifacts:
+  # 匹配输出目录下所有的 .zip 压缩包
+  - path: build\*.gz
