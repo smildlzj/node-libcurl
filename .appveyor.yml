@@ -211,5 +211,5 @@ on_success:
 deploy: off
 
 artifacts:
-  # 匹配输出目录下所有的 .zip 压缩包
-  - path: build\*.gz
+   # 匹配 build 文件夹下及其所有子目录中的所有 .gz 文件
+  - path: build\**\*.gz 
