@@ -91,8 +91,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       # see https://github.com/nodejs/node/issues/40537
-      - name: Enforce IPv4 Connectivity
-        uses: ./.github/actions/force-ipv4
+      # - name: Enforce IPv4 Connectivity
+      #   uses: ./.github/actions/force-ipv4
       - name: Setup Node.js ${{ matrix.node }}
         uses: actions/setup-node@v3
         with:
