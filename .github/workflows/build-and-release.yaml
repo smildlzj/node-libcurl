@@ -23,6 +23,7 @@ env:
   NODE_LIBCURL_GITHUB_TOKEN: ${{ secrets.NODE_LIBCURL_GITHUB_TOKEN }}
   PUBLISH_BINARY: ${{ github.event.inputs.publish-binary }}
   NODE_LIBCURL_CPP_STD: c++17
+  MACOS_UNIVERSAL_BUILD: true
 
 # all jobs here must have a matrix identical to the ones inside build-lint-test.yaml
 
@@ -145,8 +146,8 @@ jobs:
           - macos-14
         libcurl-release:
           - 7.86.0
-        node:
-          - 20
+        # node:
+        #   - 20
         electron-version:
           - 25.3.2
           - 34.5.8
