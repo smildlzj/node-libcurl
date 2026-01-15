@@ -461,8 +461,8 @@ if [[ $INSTALL_RESULT != 0 ]]; then
 fi
 
 # Clean everything
-if [[ $RUN_PREGYP_CLEAN == true ]]; then
-  yarn pregyp clean
-fi
+# if [[ $RUN_PREGYP_CLEAN == true ]]; then
+#   yarn pregyp clean
+# fi
 
 set +uv
