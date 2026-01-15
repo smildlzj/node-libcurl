@@ -144,7 +144,6 @@ jobs:
         # we use CircleCI for linux binaries
         os:
           - macos-14
-          - ubuntu-20.04
         libcurl-release:
           - 7.86.0
         # node:
